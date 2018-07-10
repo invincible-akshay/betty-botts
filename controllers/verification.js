@@ -1,8 +1,8 @@
 module.exports = (req, res) => {
- const hubChallenge = req.query[‘hub.challenge’];
+ const hubChallenge = req.query['hub.challenge'];
 
-const hubMode = req.query[‘hub.mode’];
- const verifyTokenMatches = (req.query[‘hub.verify_token’] === ‘ex_botics’);
+const hubMode = req.query['hub.mode'];
+ const verifyTokenMatches = (req.query['hub.verify_token'] === 'exbotics');
 
 if (hubMode && verifyTokenMatches) {
  res.status(200).send(hubChallenge);
